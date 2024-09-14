@@ -1,0 +1,14 @@
+﻿@model Category
+@{
+    Layout = "NewLayout";
+}
+<h1 class="text-info">Category Details</h1>
+
+<div class="card" style="width: 60rem; color:darkgrey">
+    <div class="card-body">
+        <h5 class="card-title text-muted">Category Name: @Model.Name</h5>
+        <h5 class="card-subtitle mb-2 text-muted">Category Id: @Model.CategoryId</h5>
+        <h5 class="card-subtitle mb-2 text-muted"> Description:@Model.Description</h5>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary mx-3">Back</a>
+    </div>
+</div>

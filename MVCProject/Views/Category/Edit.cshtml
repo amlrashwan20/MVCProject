@@ -1,0 +1,41 @@
+﻿@model Category
+<br />
+<br />
+@{
+    Layout = "NewLayout";
+}
+<div class="d-flex justify-content-center">
+    <h2 class="text-info fw-bold">Edit  Category</h2>
+</div>
+
+<br />
+<br />
+<br />
+
+<form asp-action="Edit" class="fw-bold">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mt-5">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-5">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-5 d-flex justify-content-center">
+        <input type="submit" value="Edit Category" class="btn btn-success mx-3 justify-content-center align-items-center" />
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary mx-3">Back</a>
+    </div>
+
+</form>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

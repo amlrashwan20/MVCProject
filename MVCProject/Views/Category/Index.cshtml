@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Category>
+@{
+    Layout = "NewLayout";
+}
+
+<h2 class="text-center text-lg">Categories in Hijaby </h2>
+<hr />
+<tfoot>
+    <a asp-controller="Category" asp-action="Create" class="btn btn-outline-info btn-lg my-4">Add Category</a>
+</tfoot>
+
+<table class="table text-center table-striped ">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="col">@item.CategoryId</th>
+                <th scope="col">@item.Name</th>
+                <th scope="col">@item.Description</th>
+                <th scope="col">
+                    <a asp-controller="Category" asp-action="Details" asp-route-id="@item.CategoryId" class="btn btn-secondary ">Details</a>
+                   
+                    <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-success "> Edit </a>
+                    
+                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-danger ">Delete</a>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
