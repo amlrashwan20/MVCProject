@@ -1,7 +1,5 @@
 ﻿using MVCProject.Models;
 using Microsoft.EntityFrameworkCore;
-
-
 namespace MVCProject.Context
 {
     public class ProjectContext : DbContext
@@ -17,11 +15,11 @@ namespace MVCProject.Context
             var _Products = new List<Product>
             {
              new Product{ProductId=1,Title="Hijab Scarf ",Price=150 , Description="Hijab Scarf for Women Soft Cotton ",Code="100h" ,Quantity=10,PathImage="https://m.media-amazon.com/images/I/619BQu-V1RL._AC_SX569_.jpg",CategoryId=1},
-             new Product{ProductId=2,Title="VOILE CHIC Premium Jersey Hijab ",Price=250 , Description="The Voile Chic jersey hijab scarf ",Code="200v",Quantity=20,PathImage="https://m.media-amazon.com/images/I/71ijjqs2hBL._AC_SX569_.jpg",CategoryId=1},
+             new Product{ProductId=2,Title="VOILE CHIC  Hijab ",Price=250 , Description="The Voile Chic jersey hijab scarf ",Code="200v",Quantity=20,PathImage="https://m.media-amazon.com/images/I/71ijjqs2hBL._AC_SX569_.jpg",CategoryId=1},
              new Product {ProductId=3,Title="Satin Dress",Price=550,Description="OBEEII Muslim Dress for Women",Code="300d",  Quantity=5,PathImage="https://m.media-amazon.com/images/I/41bxd5WS9SL._AC_SX569_.jpg",CategoryId=3},
-             new Product {ProductId=4,Title="Sleeve Maxi Dress",Price=650,Description="Abayas for Women Muslim Dress",Code="400d",   Quantity=15,PathImage="https://m.media-amazon.com/images/I/51BesB1bCIL._AC_SX569_.jpg",CategoryId=3},
-             new Product {ProductId=5,Title="Long Khimar",Price=200,Description="OLEMEK Women Muslim Long Khimar ", Code="300kh",Quantity=10,PathImage="https://m.media-amazon.com/images/I/71wzUtsdv3L._AC_SX569_.jpg",CategoryId=2}
-
+             new Product {ProductId=4,Title="Sleeve  Dress",Price=650,Description="Abayas for Women Muslim Dress",Code="400d",   Quantity=15,PathImage="https://m.media-amazon.com/images/I/51BesB1bCIL._AC_SX569_.jpg",CategoryId=3},
+             new Product {ProductId=5,Title="Long Khimar",Price=200,Description="OLEMEK Women Muslim Long Khimar ", Code="300kh",Quantity=10,PathImage="https://m.media-amazon.com/images/I/71wzUtsdv3L._AC_SX569_.jpg",CategoryId=2},
+             new Product {ProductId=6,Title="Women's Dress",Price=600,Description="Women's Dress Made Of Chamois",Code="553d",Quantity=15,PathImage="https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/32/407574/1.jpg?4144",CategoryId=3}
             };
 
             var _Categories = new List<Category>

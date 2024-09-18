@@ -3,14 +3,12 @@
     Layout = "NewLayout";
 }
 
-<h2 class="text-center text-lg">Products in Hijaby </h2>
-<hr />
-<tfoot>
-    <a asp-controller="Product" asp-action="Create" class="btn btn-outline-info btn-lg my-4">Add Product</a>
-</tfoot>
+<h2 class="text-center ">Products in Hijaby </h2>
 
-<table class="table text-center table-striped ">
-    <thead class="bg-info" >
+<hr />
+<div class="table-responsive">
+<table class="table text-center " >
+    <thead class="bg-info "  >
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
@@ -18,7 +16,7 @@
             <th scope="col">Description</th>
             <th scope="col">Code</th>
             <th scope="col">Quantity</th>
-            <th scope="col">PathImage</th>
+            <th scope="col">Image</th>
             <th scope="col">Category</th>
             <th scope="col">Options</th>
         </tr>
@@ -29,32 +27,25 @@
             <tr>
                 <th scope="col">@item.ProductId</th>
                 <th scope="col">@item.Title</th>
-                <th scope="col">@item.Price</th>
+                <th scope="col">@item.Price L.E </th>
                 <th scope="col">@item.Description</th>
                 <th scope="col">@item.Code</th>
                 <th scope="col">@item.Quantity</th>
-                <th scope="col">
-                    <button onclick="openImage('@item.PathImage')" class="btn btn-link">
-                         Image
-                    </button>
-                </th>
+                <td>
+                    <img src="@item.PathImage" alt="Image" class="img-thumbnail" style="max-width: 200px; height: auto;" />
+                </td>
                 <th scope="col">@item.Category.Name </th>
-                <th scope="col">
-                    <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductId" class="btn  btn-secondary  ">Details</a>
-                    <hr />
-                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-success "> Edit </a>
-                    <hr />
-                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-danger ">Delete</a>
+                <th scope="col" width="200">
+                    <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-secondary btn-sm">Details</a>
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-success  btn-sm"> Edit </a>
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-danger btn-sm ">Delete</a>
                 </th>
             </tr>
         }
     </tbody>
 </table>
-<script>
-    function openImage(path) {
-        var img = new Image();
-        img.src = path;
-        var win = window.open(img.src);
-        win.document.write("<title>" + path + "</title><img src='" + img.src + "'>");
-    }
-</script>
+</div>
+<footer>
+    <a asp-controller="Product" asp-action="Create" class="btn btn-outline-info  my-4">Add Product</a>
+</footer>
+

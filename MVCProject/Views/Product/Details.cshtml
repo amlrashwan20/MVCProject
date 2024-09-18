@@ -9,7 +9,7 @@
     <div class="card-body">
         <h5 class="card-title text-muted">Model Name: @Model.Title</h5>
         <h5 class="card-subtitle mb-2 text-muted">Model Id: @Model.ProductId</h5>
-        <h5 class="card-subtitle mb-2 text-muted"> Image of Model : <a href="@Model.PathImage">@Model.PathImage</a></h5>
+        <h5 class="card-subtitle mb-2 text-muted"> Image of Model :  <img src="@Model.PathImage" alt="Image" class="img-thumbnail" style="max-width: 300px; height: auto;" /></h5>
         <a asp-controller="Product" asp-action="Index" class="btn btn-secondary mx-3">Back</a>
     </div>
 </div>
